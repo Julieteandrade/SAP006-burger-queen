@@ -1,0 +1,14 @@
+.input{
+    padding: 8px 15px;
+    border: none;
+    margin: 5px;
+}
+
+.input.primary{
+    background-color: blue;
+    
+}
+
+input::placeholder {
+    color:white;
+}

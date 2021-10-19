@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { getAuth, createUserWithEmailAndpassword } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 
-const cadastrar = () => {
+const Cadastro = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const auth = getAuth();
@@ -10,7 +10,7 @@ const cadastrar = () => {
     const criarNovoUsuario = (e) => {
         e.preventDefault();
         console.log('cadastrar user', email, password);
-        createUserWithEmailAndpassword = (auth, email, password)
+        createUserWithEmailAndPassword = (auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
                 console.log(user)

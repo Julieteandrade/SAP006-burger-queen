@@ -1,0 +1,23 @@
+.form-login {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5vh;
+    padding: 15px;
+    text-align: center;
+  
+}
+
+.form-login input{
+    background: #d0d0d033;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 15px 15px 21px 0px #886e5778;
+  height: 55px;
+  letter-spacing: 1px;
+  margin: 10px;
+  padding-left: 10px;
+  width: 300px;
+    
+}

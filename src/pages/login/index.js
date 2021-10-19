@@ -17,10 +17,10 @@ const Login = () => {
 
     return (
 
-        <>
+        
 
-            <h1>login</h1>
-            <form>
+            <h1>Login</h1>
+            <form className="form-login">
                 <input type="email" name="email" placeholder="Email" />
                 <input type="password" name="password" placeholder="Senha" />
                 <button type="submit" onClick={logar}>
@@ -28,7 +28,7 @@ const Login = () => {
                 </button>
                 <Link to="/cadastro">cadastre-se</Link>
             </form>
-        </>
+    
     );
 };
 
