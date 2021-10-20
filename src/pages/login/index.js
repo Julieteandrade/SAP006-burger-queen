@@ -1,6 +1,6 @@
 import './login.css';
 import { Link, useHistory } from 'react-router-dom';
-
+import logo from './logo/NerdBurger.png';
 
 
 const Login = () => {
@@ -17,18 +17,21 @@ const Login = () => {
 
     return (
 
-        
 
-            <h1>Login</h1>
-            <form className="form-login">
-                <input type="email" name="email" placeholder="Email" />
-                <input type="password" name="password" placeholder="Senha" />
-                <button type="submit" onClick={logar}>
-                    Entrar
-                </button>
-                <Link to="/cadastro">cadastre-se</Link>
-            </form>
-    
+
+        <>
+        <h1>Login</h1>
+        <form className="form-login">
+            <img src={logo} className='App-logo' alt='logo' />
+            <input type="email" name="email" placeholder="Email" />
+            <input type="password" name="password" placeholder="Senha" />
+            <button type="submit" onClick={logar}>
+                Entrar
+            </button>
+            <Link to="/cadastro">cadastre-se</Link>
+        </form>
+        </>
+
     );
 };
 
