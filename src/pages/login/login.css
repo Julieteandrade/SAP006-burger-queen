@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap');
+
+body{
+  background:linear-gradient(120deg,rgb(243, 240, 240),rgb(247, 247, 146));
+}
+
 .form-login {
     align-items: center;
     display: flex;
@@ -6,18 +12,51 @@
     margin-top: 5vh;
     padding: 15px;
     text-align: center;
-  
+    
 }
 
 .form-login input{
-  background: #d0d0d033;
+  background: #d0d0d033; 
   border: none;
   border-radius: 12px;
-  box-shadow: 15px 15px 21px 0px #886e5778;
+  box-shadow: 15px 15px 21px 0px #886e5778; 
   height: 55px;
   letter-spacing: 1px;
   margin: 10px;
   padding-left: 10px;
   width: 300px;
-    
+  margin-top:10px; 
 }
+
+.img-burger {
+  width: 12rem;
+  margin-left: 570px;
+  
+}
+
+.title-logo{
+  text-align: center;
+  font-size: 55px;
+  color:darkgoldenrod;
+  font-family: 'IM Fell DW Pica SC', serif;
+  margin-top: 40px;
+
+  
+}
+ button{
+   width:110px;
+   height: 40px;
+   margin-top: 30px;
+   border-radius:10px;
+   background-color:darkgoldenrod;
+   font-size: 20px;
+   font-family:'IM Fell DW Pica SC', serif;
+   color:black;
+ }
+
+ .cadastre{
+   font-family:'IM Fell DW Pica SC', serif;
+   color:black;
+   font-size: 25px;
+   margin-top: 40px;
+ }
