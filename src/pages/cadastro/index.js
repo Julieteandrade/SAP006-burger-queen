@@ -10,18 +10,21 @@ const Cadastro = () => {
     const criarNovoUsuario = (e) => {
         e.preventDefault();
         console.log('cadastrar user', email, password);
+
         createUserWithEmailAndPassword = (auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
-                console.log(user)
+                console.log(user);
 
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                console.log(error);
-                alert('Tente denovo')
+                console.log(errorCode, errorMessage);
+                alert('Tente novamente');
+        
             });
+           
     };
 
     return (

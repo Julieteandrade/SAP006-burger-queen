@@ -2,6 +2,7 @@
 
 body{
   background:linear-gradient(120deg,rgb(243, 240, 240),rgb(247, 247, 146));
+  height: 0px;
 }
 
 .form-login {
@@ -31,7 +32,6 @@ body{
 .img-burger {
   width: 12rem;
   margin-left: 570px;
-  
 }
 
 .title-logo{
@@ -51,12 +51,22 @@ body{
    background-color:darkgoldenrod;
    font-size: 20px;
    font-family:'IM Fell DW Pica SC', serif;
-   color:black;
+   color:white;
  }
 
  .cadastre{
    font-family:'IM Fell DW Pica SC', serif;
-   color:black;
+   color:darkgoldenrod;
    font-size: 25px;
    margin-top: 40px;
  }
+
+ /* responsive: */
+
+ /* @media screen and (max-width: 768px) {
+
+   .img-burger{
+     align-items: center;
+
+   
+ } */

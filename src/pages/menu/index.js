@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
-import './style.css';
+
 
 const Menu = () => {
-    const [products , setProducts] = useState([]);
+    const [produtos , setProdutos] = useState([]);
     const [carrinho , setCarrinho] = useState([]);
     const db = getFirestore();
 //TODO trazer os produtos da api
@@ -20,11 +20,11 @@ useEffect(() => {
         { id: 7, name: 'Batata frita'},
         { id: 8, name: 'Anéis de cebola'},
         { id: 9, name: 'Água 500ml'},
-        { id: 10, name:'Água 750ml'},
+        { id: 10,name: 'Água 750ml'},
     
    ];
 
-    // setProducts(data);
+    setProdutos(data);
 
     getDocs(collection(db, 'products')).then((productsArrayFirestore) => {
         const newArray = [];
@@ -36,11 +36,12 @@ useEffect(() => {
             id: doc.id,
             name: doc.data().name,
             price: doc.data().price,
+
 };
 newArray.push(obj);
 });
 console.log(newArray);
-setProducts(newArray);
+setProdutos(newArray);
 });
 },[db]);
 
@@ -55,6 +56,9 @@ const enviarNovoPedido = (e) => {
     e.preventDefault();
 
 //TODO montar body da requisição
+console.log('fazer pedido na API');
+
+//TODO requisição deu bom , navegar para a tela de pedidos
 console.log('navegar para /pedidos');
 };
 
@@ -65,7 +69,7 @@ return(
 <main>
     <section>
         <ul>
-            {products.map((prod) => (
+            {produtos.map((prod) => (
                 <li key={prod.id}>
                     {prod.name} {prod.price}
                     <button type="button" onClick={() => adicionaProduto(prod)}>

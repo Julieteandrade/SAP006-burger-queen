@@ -4,11 +4,11 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Login from './pages/login';
 import Cadastro from './pages/cadastro';
-
+import Menu from './pages/menu';
 
 
 function App() {
-  const user = true;
+  
 
   return (
     <Router>
@@ -17,10 +17,9 @@ function App() {
           <Cadastro />
         </Route>
         <Route path="/menu">
-          {/* {user ? <Menu /> : <Redirect to="/" />} */}
+          <Menu/>
         </Route>
         <Route exact path="/">
-          {/* {user ? <Redirect to="/menu" />: <Login />} */}
           <Login />
         </Route>
       </Switch>
