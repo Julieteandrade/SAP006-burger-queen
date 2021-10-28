@@ -5,7 +5,7 @@ import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
 const Menu = () => {
     const [produtos , setProdutos] = useState([]);
-    
+    const [carrinho , setCarrinho] = useState([]);
     const db = getFirestore();
 //TODO trazer os produtos da api
 
@@ -79,12 +79,14 @@ return (
             ))}
         </ul>
     </section>
-    
-
+    <section>
+    {carrinho.map((pedido) => (
+        <li key={pedido.id}>{pedido.name}</li>
+    ))}
     <button type="button" onClick={enviarNovoPedido}>
         Fazer novo pedido
     </button>
-    
+    </section>
 </main>
 <a href="/pedidos">Ver todos os pedidos</a>
 </>

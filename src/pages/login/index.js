@@ -1,12 +1,13 @@
 import './login.css';
 import { useState } from "react";
-// import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import GeekBurger from '../../img/GeekBurger.png';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../services/firebase.js';
 
 
 function Login() {
+    const history = useHistory();
     const [loginEmail, setLoginEmail] = useState('');
     const [loginPassword, setLoginPassword] = useState('');
 
@@ -23,18 +24,8 @@ function Login() {
     }
 };
 
+history.push("/menu");
 
-// const Login = () => {
-//     const history = useHistory();
-//     //TODO gerenciar estados dos inputs
-//     const logar = (e) => {
-//         e.preventDefault();
-//         //TODO login de usuário
-//         console.log("fazer requisição na API em /auth")
-
-//         //TODO deu bom? navega para a tela de menu
-//         history.push("/menu");
-//     };
 
     return (
 
