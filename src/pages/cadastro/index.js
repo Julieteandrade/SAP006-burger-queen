@@ -1,18 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
-import { auth } from '../../services/firebase.js';
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import './cadastro.css';
 
 
 function Cadastro() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
     const [user, setUser] = useState({});
+    const auth = getAuth();
 
     onAuthStateChanged(auth, (currentUser) => {
-    setUser(currentUser);
+        setUser(currentUser);
 
     });
 
