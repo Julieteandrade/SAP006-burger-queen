@@ -1,31 +1,21 @@
 import './login.css';
-import { useState } from "react";
 import { useHistory } from 'react-router-dom';
 import NerdBurger from '../../img/NerdBurger.png';
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 
 
-function Login() {
-    const history = useHistory();
-    const [loginEmail, setLoginEmail] = useState('');
-    const [loginPassword, setLoginPassword] = useState('');
-    const auth = getAuth();
-    const logar = async () => {
-        try {
-            const user = await signInWithEmailAndPassword(
-                auth,
-                loginEmail,
-                loginPassword
-            )
-            console.log(user);
-        } catch (error) {
-            console.log(error.message);
-        }
+
+const Login = () => {
+    const history = useHistory()
+    //TODO gerenciar estados dos inputs
+    const logar = (e) => {
+        e.preventDefault();
+        //TODO login de usuário
+        console.log("fazer requisição na API em /auth")
+
+        //TODO deu bom? navega para a tela de menu
+        history.push("/menu");
     };
-
-    history.push("/menu");
-
 
     return (
 
@@ -41,15 +31,11 @@ function Login() {
                     type="email"
                     name="email"
                     placeholder="E-mail*"
-                    onChange={(e) => setLoginEmail(e.target.value)}
-                    value={loginEmail}
                 />
                 <input
                     type="password"
                     name="password"
                     placeholder="Senha*"
-                    onChange={(e) => setLoginPassword(e.target.value)}
-                    value={loginPassword}
                 />
                 <button type="submit" onClick={logar}>
                     Entrar

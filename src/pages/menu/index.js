@@ -5,7 +5,7 @@ import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
 const Menu = () => {
     const [produtos, setProdutos] = useState([]);
-    const [carrinho, setCarrinho] = useState([]);
+    // const [carrinho, setCarrinho] = useState([]);
     const db = getFirestore();
     //TODO trazer os produtos da api
 
@@ -51,6 +51,7 @@ const Menu = () => {
     //TODO manipular add de produtos
 
     const adicionaProduto = (prod) => {
+        console.log(prod);
     };
 
     const enviarNovoPedido = (e) => {
