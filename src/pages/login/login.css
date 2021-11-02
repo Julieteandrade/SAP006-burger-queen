@@ -13,7 +13,7 @@ body{
     margin-top: 5vh;
     padding: 15px;
     text-align: center;
-    
+    margin-top: 10px;
 }
 
 .form-login input{
@@ -26,7 +26,7 @@ body{
   margin: 10px;
   padding-left: 10px;
   width: 300px;
-  margin-top:10px; 
+  margin-top:0px; 
 }
 
 .img-burger {
@@ -39,7 +39,7 @@ body{
   font-size: 55px;
   color:darkgoldenrod;
   font-family: 'IM Fell DW Pica SC', serif;
-  margin-top: 40px;
+  margin-top: 30px;
 
   
 }
@@ -58,7 +58,7 @@ body{
    font-family:'IM Fell DW Pica SC', serif;
    color:darkgoldenrod;
    font-size: 25px;
-   margin-top: 40px;
+   margin-top: 20px;
  }
 
  /* responsive: */

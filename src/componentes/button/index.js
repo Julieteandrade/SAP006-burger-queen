@@ -1,12 +1,12 @@
-import "./button.css"
-const Button = (props) => {
-    const classes = `button  ${props.variant}`;
-return (
-    <button className={classes}>
-   {props.children}
-    </button>
-)
+import React from 'react';
+import './Button.css';
 
-}
+const Button = ({children, ...props}) => {
+    return (
+        <button {...props}>
+        {children}
+    </button>
+    );
+};
 
 export default Button;

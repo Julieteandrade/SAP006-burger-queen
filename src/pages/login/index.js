@@ -1,12 +1,13 @@
 import './login.css';
 import { useHistory } from 'react-router-dom';
 import NerdBurger from '../../img/NerdBurger.png';
-
+import Footer from '../../componentes/footer';
 
 
 
 const Login = () => {
     const history = useHistory()
+    
     //TODO gerenciar estados dos inputs
     const logar = (e) => {
         e.preventDefault();
@@ -44,6 +45,8 @@ const Login = () => {
                     Cadastre-se!
                 </a>
             </form>
+            <Footer />
+
         </>
 
     );
