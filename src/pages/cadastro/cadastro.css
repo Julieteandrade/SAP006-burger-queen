@@ -1,4 +1,4 @@
-.form-login {
+.form-cadastro {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -9,18 +9,28 @@
     
 }
 
+.form-cadastro input{
+  background: #d0d0d033; 
+  border: none;
+  border-radius: 12px;
+  box-shadow: 15px 15px 21px 0px #886e5778; 
+  height: 55px;
+  letter-spacing: 1px;
+  margin: 10px;
+  padding-left: 10px;
+  width: 300px;
+  margin-top: 0px;
+}
+
 .img-burger {
     width: 12rem;
     margin-left: 570px;
   }
 
-  button{
-    width:110px;
-    height: 40px;
-    margin-top: 30px;
-    border-radius:10px;
-    background-color:darkgoldenrod;
-    font-size: 20px;
-    font-family:'IM Fell DW Pica SC', serif;
-    color:white;
-  }
+  .doLogin{
+   font-family:'IM Fell DW Pica SC', serif;
+   color:darkgoldenrod;
+   font-size: 25px;
+   margin-left: 600px;
+ }
+  

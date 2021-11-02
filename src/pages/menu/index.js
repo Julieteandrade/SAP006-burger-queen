@@ -10,22 +10,7 @@ const Menu = () => {
     //TODO trazer os produtos da api
 
     useEffect(() => {
-        // const data = [
-        //     { id: 1, name: 'Café americano' },
-        //     { id: 2, name: 'Café com leite' },
-        //     { id: 3, name: 'Sanduíche de presunto e queijo' },
-        //     { id: 4, name: 'Suco de fruta natural' },
-        //     { id: 5, name: 'Hambúrger simples' },
-        //     { id: 6, name: 'Hambúrger duplo' },
-        //     { id: 7, name: 'Batata frita' },
-        //     { id: 8, name: 'Anéis de cebola' },
-        //     { id: 9, name: 'Água 500ml' },
-        //     { id: 10, name: 'Água 750ml' },
-        //     { id: 11, name: 'Bebida gaseificada 500ml' },
-        //     { id: 12, name: 'Bebida gaseificada 750ml' },
-        // ];
 
-        // setProdutos(data);
 
         getDocs(collection(db, 'products')).then((productsArrayFirestore) => {
             const newArray = [];
@@ -42,7 +27,7 @@ const Menu = () => {
                 newArray.push(obj);
             });
             console.log(newArray);
-            setProdutos(newArray);
+            setProdutos(newArray)
         });
     }, [db]);
 

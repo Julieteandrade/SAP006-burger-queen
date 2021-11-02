@@ -2,7 +2,8 @@ import './login.css';
 import { useHistory } from 'react-router-dom';
 import NerdBurger from '../../img/NerdBurger.png';
 import Footer from '../../componentes/footer';
-// import { getAuth, singInWithEmailAndPassword } from 'firebase/auth';
+import Button from '../../componentes/button';
+
 
 
 const Login = () => {
@@ -38,9 +39,9 @@ const Login = () => {
                     name="password"
                     placeholder="Senha*"
                 />
-                <button type="submit" onClick={logar}>
+                <Button className="button-global" onClick={logar}>
                     Entrar
-                </button>
+                </Button>
                 <a href="/cadastro" className="cadastre">
                     Cadastre-se!
                 </a>
