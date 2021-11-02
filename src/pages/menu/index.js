@@ -5,27 +5,27 @@ import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
 const Menu = () => {
     const [produtos, setProdutos] = useState([]);
-    // const [carrinho, setCarrinho] = useState([]);
+    const [carrinho, setCarrinho] = useState([]);
     const db = getFirestore();
     //TODO trazer os produtos da api
 
     useEffect(() => {
-        const data = [
-            { id: 1, name: 'Café americano' },
-            { id: 2, name: 'Café com leite' },
-            { id: 3, name: 'Sanduíche de presunto e queijo' },
-            { id: 4, name: 'Suco de fruta natural' },
-            { id: 5, name: 'Hambúrger simples' },
-            { id: 6, name: 'Hambúrger duplo' },
-            { id: 7, name: 'Batata frita' },
-            { id: 8, name: 'Anéis de cebola' },
-            { id: 9, name: 'Água 500ml' },
-            { id: 10, name: 'Água 750ml' },
-            { id: 11, name: 'Bebida gaseificada 500ml' },
-            { id: 12, name: 'Bebida gaseificada 750ml' },
-        ];
+        // const data = [
+        //     { id: 1, name: 'Café americano' },
+        //     { id: 2, name: 'Café com leite' },
+        //     { id: 3, name: 'Sanduíche de presunto e queijo' },
+        //     { id: 4, name: 'Suco de fruta natural' },
+        //     { id: 5, name: 'Hambúrger simples' },
+        //     { id: 6, name: 'Hambúrger duplo' },
+        //     { id: 7, name: 'Batata frita' },
+        //     { id: 8, name: 'Anéis de cebola' },
+        //     { id: 9, name: 'Água 500ml' },
+        //     { id: 10, name: 'Água 750ml' },
+        //     { id: 11, name: 'Bebida gaseificada 500ml' },
+        //     { id: 12, name: 'Bebida gaseificada 750ml' },
+        // ];
 
-        setProdutos(data);
+        // setProdutos(data);
 
         getDocs(collection(db, 'products')).then((productsArrayFirestore) => {
             const newArray = [];
@@ -51,7 +51,7 @@ const Menu = () => {
     //TODO manipular add de produtos
 
     const adicionaProduto = (prod) => {
-        console.log(prod);
+
     };
 
     const enviarNovoPedido = (e) => {
@@ -81,11 +81,14 @@ const Menu = () => {
                         ))}
                     </ul>
                 </section>
-
-                <button type="button" onClick={enviarNovoPedido}>
-                    Fazer novo pedido
-                </button>
-
+                <section>
+                    {carrinho.map((pedido) => (
+                        <li key={pedido.id}>{pedido.name}</li>
+                    ))}
+                    <button type="button" onClick={enviarNovoPedido}>
+                        Fazer novo pedido
+                    </button>
+                </section>
             </main>
             <a href="/pedidos">Ver todos os pedidos</a>
         </>

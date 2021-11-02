@@ -1,5 +1,5 @@
 
-import "./services/firebase"
+import "./services/firebase";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Login from './pages/login';
@@ -17,7 +17,7 @@ function App() {
           <Cadastro />
         </Route>
         <Route path="/menu">
-          <Menu/>
+          <Menu />
         </Route>
         <Route exact path="/">
           <Login />

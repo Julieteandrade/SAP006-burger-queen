@@ -2,12 +2,12 @@ import './login.css';
 import { useHistory } from 'react-router-dom';
 import NerdBurger from '../../img/NerdBurger.png';
 import Footer from '../../componentes/footer';
-
+// import { getAuth, singInWithEmailAndPassword } from 'firebase/auth';
 
 
 const Login = () => {
     const history = useHistory()
-    
+
     //TODO gerenciar estados dos inputs
     const logar = (e) => {
         e.preventDefault();
