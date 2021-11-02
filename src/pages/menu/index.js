@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { collection, getDocs, getFirestore } from 'firebase/firestore';
-
+import './menu.css';
 
 
 const Menu = () => {
@@ -27,17 +27,18 @@ const Menu = () => {
                 newArray.push(obj);
             });
             console.log(newArray);
-            setProdutos(newArray)
+            setProdutos(newArray);
         });
     }, [db]);
 
 
 
     //TODO manipular add de produtos
-
     const adicionaProduto = (prod) => {
 
     };
+
+
 
     const enviarNovoPedido = (e) => {
         e.preventDefault();
@@ -49,6 +50,7 @@ const Menu = () => {
         console.log('navegar para /pedidos');
     };
 
+    
     return (
         <>
 
