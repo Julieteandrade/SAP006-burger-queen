@@ -5,10 +5,13 @@ import './cadastro.css';
 import Footer from '../../componentes/footer';
 import Button from '../../componentes/button';
 
+
+
 const Cadastrar = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const auth = getAuth();
+
 
 
     const criarNovoUsuario = (e) => {
@@ -27,12 +30,10 @@ const Cadastrar = () => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 console.log(error, errorCode, errorMessage);
-                alert('Tente novamente');
+                alert('Preencha os campos obrigatórios');
 
             });
 
-
-        //TODO navegar para Menu
     };
 
     return (

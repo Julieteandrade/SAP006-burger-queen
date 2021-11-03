@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { collection, getDocs, getFirestore } from 'firebase/firestore';
 import './menu.css';
-
+import Button from '../../componentes/button';
 
 const Menu = () => {
     const [produtos, setProdutos] = useState([]);
@@ -72,12 +72,14 @@ const Menu = () => {
                     {carrinho.map((pedido) => (
                         <li key={pedido.id}>{pedido.name}</li>
                     ))}
-                    <button type="button" onClick={enviarNovoPedido}>
-                        Fazer novo pedido
-                    </button>
+                    <Button className="button-global" onClick={enviarNovoPedido}>
+                        Novo pedido
+                    </Button>
                 </section>
             </main>
-            <a href="/pedidos">Ver todos os pedidos</a>
+            <a href="/pedidos" className="verPedidos">
+                Ver todos os pedidos
+            </a>
         </>
     );
 };

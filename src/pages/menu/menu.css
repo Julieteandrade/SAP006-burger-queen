@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap');
+
+h1{
+    font-family:'IM Fell DW Pica SC', serif; 
+    font-size: 70px;
+    margin-left: 50px;
+
+}
+
+section{
+    font-family:Arial, Helvetica, sans-serif;
+    color:black;
+    font-size: 20px;
+}
+ .button-global{
+     font-size: 16px;
+    
+    
+ }
+
+ .verPedidos{
+    font-family:'IM Fell DW Pica SC', serif;
+    color:darkgoldenrod;
+    font-size: 25px;
+    margin-bottom: 30px;
+
+ }
