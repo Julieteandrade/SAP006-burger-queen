@@ -11,7 +11,7 @@ const Login = () => {
     const [loginEmail, setLoginEmail] = useState('');
     const [loginPassword, setLoginPassword] = useState('');
     const auth = getAuth();
-    const history = useHistory()
+    const history = useHistory();
 
     //TODO gerenciar estados dos inputs
     const logar = (e) => {
@@ -30,7 +30,7 @@ const Login = () => {
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                console.log(error);
+                console.log(error, errorCode, errorMessage);
                 alert("Preencha os campos obrigatórios");
                 //TODO deu bom? navega para a tela de menu
                 history.push("/menu");

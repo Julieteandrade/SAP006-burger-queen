@@ -50,7 +50,7 @@ const Menu = () => {
         console.log('navegar para /pedidos');
     };
 
-    
+
     return (
         <>
 
